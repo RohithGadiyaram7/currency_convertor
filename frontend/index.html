@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Currency Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Currency Agent</h1>
+
+        <label>AI Currency Request</label>
+
+<input
+    type="text"
+    id="ai_input"
+    placeholder="Convert 100 USD to INR"
+>
+
+<button onclick="aiConvert()">
+    AI Convert
+</button>
+
+
+        <label>Amount</label>
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="Enter Amount"
+        >
+
+        <label>From Currency</label>
+
+        <select id="from_currency">
+
+            <option value="USD">USD</option>
+
+            <option value="INR">INR</option>
+
+            <option value="EUR">EUR</option>
+
+            <option value="GBP">GBP</option>
+
+            <option value="JPY">JPY</option>
+
+            <option value="AUD">AUD</option>
+
+            <option value="CAD">CAD</option>
+
+            <option value="AED">AED</option>
+
+        </select>
+
+        <label>To Currency</label>
+
+        <select id="to_currency">
+
+            <option value="INR">INR</option>
+
+            <option value="USD">USD</option>
+
+            <option value="EUR">EUR</option>
+
+            <option value="GBP">GBP</option>
+
+            <option value="JPY">JPY</option>
+
+            <option value="AUD">AUD</option>
+
+            <option value="CAD">CAD</option>
+
+            <option value="AED">AED</option>
+
+        </select>
+
+        <button onclick="convertCurrency()">
+            Convert Currency
+        </button>
+
+        <h2 id="result"></h2>
+
+        <h2>Conversion History</h2>
+
+<table id="history_table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Amount</th>
+            <th>Converted</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+</table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
