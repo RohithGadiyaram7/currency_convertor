@@ -34,7 +34,7 @@ def ai_convert(
     db: Session = Depends(get_db)
 ):
 
-    text = request["text"]
+    text = request.get("text", "").strip()
 
     pattern = r"(?:convert\s+)?(\d+)\s+([A-Za-z]{3})\s+to\s+([A-Za-z]{3})"
     match = re.search(pattern, text, re.IGNORECASE)

@@ -17,3 +17,4 @@ class CurrencyHistory(Base):
     converted_amount = Column(Float)
 
     rate = Column(Float)
+    

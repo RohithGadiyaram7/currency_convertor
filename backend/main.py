@@ -9,6 +9,7 @@ from backend import models
 from backend.api import router
 
 
+
 app = FastAPI()
 
 app.add_middleware(
@@ -29,3 +30,9 @@ def home():
     return {
         "message": "Currency Agent Backend + PostgreSQL Connected"
     }
+    
+    
+@app.get("/add")
+def add(a, b):
+    return a + b
+print(add(2,4))
